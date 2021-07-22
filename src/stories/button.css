@@ -1,0 +1,283 @@
+/*
+ * Button
+ */
+
+:root {
+  --color-white: white;
+  --color-primary: #4492f7;
+  --color-secondary: #6c757d;
+  --color-success: #45F751;
+  --color-warning: #f7b544;
+  --color-danger: #f75c44;
+  --color-primary--dark: #074FAD;
+  --color-secondary--dark: #3E4348;
+  --color-success--dark: #069810;
+  --color-warning--dark: #986206;
+  --color-danger--dark: #AD1D07;
+  --elevation-1: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  --elevation-2: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  --elevation-3: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
+  --bezier: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --font-family-sans-serif: "Open Sans", -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo,Monaco,Consolas, "Liberation Mono", "Courier New", monospace;
+  --button-transition: color .3s var(--bezier), background-color .3s var(--bezier), border-color .3s var(--bezier), box-shadow .15s var(--bezier);
+}
+
+/*
+ * Button: Base
+ */
+.easygo-button {
+  font-family: var(--font-family-sans-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  transition: var(--button-transition);
+}
+
+/*
+ * Button: Elevation
+ */
+.easygo-button--elevation-1 {
+  box-shadow: var(--elevation-1);
+}
+
+.easygo-button--elevation-2 {
+  box-shadow: var(--elevation-2);
+}
+
+.easygo-button--elevation-3 {
+  box-shadow: var(--elevation-3);
+}
+
+/*
+ * Button: Primary
+ */
+.easygo-button--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.easygo-button--primary:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary--dark);
+}
+
+.easygo-button--primary:disabled {
+  opacity: 0.65;
+  background-color: var(--color-primary);
+  cursor: auto;
+}
+
+.easygo-button--outlined-primary {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  transition: var(--button-transition);
+}
+
+.easygo-button--outlined-primary:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.easygo-button--outlined-primary:disabled {
+  opacity: 0.65;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  cursor: auto;
+}
+
+/*
+ * Button: Secondary
+ */
+.easygo-button--secondary {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+.easygo-button--secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary--dark);
+}
+
+.easygo-button--secondary:disabled {
+  opacity: 0.65;
+  background-color: var(--color-secondary);
+  cursor: auto;
+}
+
+.easygo-button--outlined-secondary {
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  transition: var(--button-transition);
+}
+
+.easygo-button--outlined-secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.easygo-button--outlined-secondary:disabled {
+  opacity: 0.65;
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  cursor: auto;
+}
+
+/*
+ * Button: Success
+ */
+.easygo-button--success {
+  color: var(--color-white);
+  background-color: var(--color-success);
+}
+
+.easygo-button--success:hover {
+  color: var(--color-white);
+  background-color: var(--color-success--dark);
+}
+
+.easygo-button--success:disabled {
+  opacity: 0.65;
+  background-color: var(--color-success);
+  cursor: auto;
+}
+
+.easygo-button--outlined-success {
+  color: var(--color-success);
+  background-color: transparent;
+  border: 1px solid var(--color-success);
+  transition: var(--button-transition);
+}
+
+.easygo-button--outlined-success:hover {
+  color: var(--color-white);
+  background-color: var(--color-success);
+}
+
+.easygo-button--outlined-success:disabled {
+  opacity: 0.65;
+  color: var(--color-success);
+  background-color: transparent;
+  border: 1px solid var(--color-success);
+  cursor: auto;
+}
+
+/*
+ * Button: Danger
+ */
+.easygo-button--danger {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+}
+
+.easygo-button--danger:hover {
+  color: var(--color-white);
+  background-color: var(--color-danger--dark);
+}
+
+.easygo-button--danger:disabled {
+  opacity: 0.65;
+  background-color: var(--color-danger);
+  cursor: auto;
+}
+
+.easygo-button--outlined-danger {
+  color: var(--color-danger);
+  background-color: transparent;
+  border: 1px solid var(--color-danger);
+  transition: var(--button-transition);
+}
+
+.easygo-button--outlined-danger:hover {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+}
+
+.easygo-button--outlined-danger:disabled {
+  opacity: 0.65;
+  color: var(--color-danger);
+  background-color: transparent;
+  border: 1px solid var(--color-danger);
+  cursor: auto;
+}
+
+/*
+ * Button: Warning
+ */
+.easygo-button--warning {
+  color: var(--color-white);
+  background-color: var(--color-warning);
+}
+
+.easygo-button--warning:hover {
+  color: var(--color-white);
+  background-color: var(--color-warning--dark);
+}
+
+.easygo-button--warning:disabled {
+  opacity: 0.65;
+  background-color: var(--color-warning);
+  cursor: auto;
+}
+
+.easygo-button--outlined-warning {
+  color: var(--color-warning);
+  background-color: transparent;
+  border: 1px solid var(--color-warning);
+  transition: var(--button-transition);
+}
+
+.easygo-button--outlined-warning:hover {
+  color: var(--color-white);
+  background-color: var(--color-warning);
+}
+
+.easygo-button--outlined-warning:disabled {
+  opacity: 0.65;
+  color: var(--color-warning);
+  background-color: transparent;
+  border: 1px solid var(--color-warning);
+  cursor: auto;
+}
+
+/*
+ * Button: Small
+ */
+.easygo-button--small {
+  font-size: 0.75rem;
+  padding: .25rem .5rem;
+}
+
+/*
+ * Button: Medium
+ */
+.easygo-button--medium {
+  font-size: 1rem;
+  padding: .35rem .75rem;
+}
+
+/*
+ * Button: Large
+ */
+.easygo-button--large {
+  font-size: 1.25rem;
+  padding: .5rem 1rem;
+}
